@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Validates an hash
  * Usage @validator("hash")
@@ -7,6 +8,7 @@
  * @author ahsen tekdemir
  * @version 1.0.0
  */
+
 
 class HashValidator{
     const FLAGS = [
@@ -31,7 +33,7 @@ class HashValidator{
         $value = (string) $value;
         $flag = null;
         
-        if($this->notNull !== false){
+        if($value != null and $value != false){
             if (isset(self::FLAGS[$this->ref])){
                 $flag = self::FLAGS[$this-ref];
             }
